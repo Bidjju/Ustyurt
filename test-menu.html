@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Menu Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 200vh;
+            background: #f5f5f5;
+        }
+        .test-content {
+            padding: 200px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-content h1 {
+            color: #333;
+        }
+        .test-content p {
+            line-height: 1.8;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER COMPONENT -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="header-logo">
+                    <img src="https://www.genspark.ai/api/files/s/eodwZWGz" alt="Ustyurt Logo" class="logo-img">
+                </div>
+                <nav class="main-nav">
+                    <a href="#main" class="nav-link">MAIN</a>
+                    <a href="#about" class="nav-link">ABOUT</a>
+                    <a href="#maps" class="nav-link">MAPS</a>
+                </nav>
+                <div class="menu-wrapper">
+                    <button class="burger-menu" aria-label="Toggle menu" id="burgerBtn">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
+                    <!-- BURGER MENU DROPDOWN -->
+                    <div class="menu-overlay" id="menuOverlay">
+                        <div class="menu-content">
+                            <nav class="dossier-chapters">
+                                <h2 class="menu-title">Dossier Chapters</h2>
+                                <ul class="chapter-list">
+                                    <li><a href="#executive-summary" class="chapter-link">Executive Summary</a></li>
+                                    <li><a href="#identification" class="chapter-link">Identification of the Nominated Property</a></li>
+                                    <li><a href="#description" class="chapter-link">Description</a></li>
+                                    <li><a href="#justification" class="chapter-link">Justification For Inscription</a></li>
+                                    <li><a href="#conservation" class="chapter-link">State of Conservation and Factors Affecting the Nominated Property</a></li>
+                                    <li><a href="#protection" class="chapter-link">Protection and Management of the Nominated Property</a></li>
+                                    <li><a href="#monitoring" class="chapter-link">Monitoring</a></li>
+                                    <li><a href="#documentation" class="chapter-link">Documentation</a></li>
+                                    <li><a href="#contact" class="chapter-link">Contact information of the Responsible Authorities</a></li>
+                                    <li><a href="#signature" class="chapter-link">Signature on behalf of the State Party</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="test-content">
+        <h1>Burger Menu Test Page</h1>
+        <p><strong>Instructions:</strong> Look at the top-right corner of the page. You should see three white horizontal lines (burger icon). Click on it to see the dropdown menu with dossier chapters.</p>
+        <p>The burger menu is located in the header next to the MAIN, ABOUT, MAPS navigation links.</p>
+        <p>When you click the burger icon:</p>
+        <ul>
+            <li>A beautiful dropdown menu should slide down</li>
+            <li>The menu has a green gradient background</li>
+            <li>It contains 10 dossier chapters</li>
+            <li>The burger icon transforms into an X</li>
+        </ul>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
