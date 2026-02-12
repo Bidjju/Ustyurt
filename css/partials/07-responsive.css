@@ -1,0 +1,389 @@
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+        letter-spacing: 0.15em;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+        white-space: normal;
+        line-height: 1.6;
+    }
+    
+    .hero-label {
+        font-size: 0.75rem;
+        margin-bottom: 1.5rem;
+        white-space: normal;
+        line-height: 1.6;
+    }
+
+    .hero-section {
+        min-height: 100vh;
+        padding: 0;
+    }
+
+    .hero-content {
+        padding: 2rem 1rem;
+        margin-top: -8rem;
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .hero-logo-container {
+        width: 180px;
+        height: 180px;
+        margin: 0 0 1rem;
+    }
+
+    .hero-location {
+        font-size: 0.75rem;
+    }
+
+    .hero-pattern-bg {
+        width: 300px;
+        height: 450px;
+    }
+
+    .content-section {
+        padding: 2.5rem 0;
+    }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .header-content {
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .logo-img {
+        height: 45px;
+    }
+
+    .menu-wrapper {
+        margin-left: auto;
+    }
+
+    .burger-menu {
+        padding: 0.25rem;
+    }
+
+    .burger-line {
+        width: 25px;
+        height: 2px;
+    }
+
+    .menu-content {
+        right: 0.5rem;
+        left: 0.5rem;
+        width: auto;
+        top: 62px;
+    }
+
+    .menu-title {
+        font-size: 1rem;
+        padding: 1rem 1.25rem 0.75rem;
+    }
+
+    .chapter-link {
+        font-size: 0.8125rem;
+        padding: 0.75rem 1.25rem;
+        padding-left: 2.25rem;
+        line-height: 1.5;
+    }
+
+    .chapter-link::before {
+        left: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .chapter-link:hover {
+        padding-left: 2.75rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ouv-content {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .criteria-item {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .materials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Scroll arrows mobile */
+    .scroll-arrow-left {
+        left: 2%;
+    }
+    
+    .scroll-arrow-right {
+        right: 2%;
+    }
+    
+    .scroll-down-arrow {
+        width: 35px;
+        height: 55px;
+    }
+    
+    .arrow-line {
+        width: 3px;
+        height: 25px;
+    }
+    
+    .arrow-line:first-child {
+        transform: rotate(45deg) translateX(9px);
+    }
+    
+    .arrow-line:last-child {
+        transform: rotate(-45deg) translateX(-9px);
+    }
+    
+    /* Justification page mobile */
+    .justification-page-section {
+        padding: 3rem 0 2.5rem;
+    }
+    
+    .justification-page-section h1 {
+        font-size: 2rem;
+    }
+    
+    .justification-page-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .criterion-box {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    .criterion-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+        top: -12px;
+        left: 1.5rem;
+    }
+    
+    /* About and Contacts mobile */
+    .about-content p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .contacts-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    .contact-info {
+        padding: 1.5rem;
+    }
+    
+    /* Download section mobile */
+    .download-main-content p {
+        font-size: 1rem;
+    }
+    
+    .download-box {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .download-file-info h3 {
+        font-size: 1.25rem;
+    }
+    
+    .btn-download-main {
+        padding: 0.875rem 2rem;
+        font-size: 0.9375rem;
+        width: 100%;
+    }
+    
+    /* Maps page mobile */
+    .maps-page-section h1 {
+        font-size: 2rem;
+    }
+    
+    .maps-page-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .map-category-card {
+        padding: 1.5rem;
+    }
+    
+    .map-category-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    /* White arrow on justification page mobile */
+    .scroll-arrow-center-white {
+        width: 50px;
+        height: 75px;
+    }
+    
+    .arrow-line-white {
+        width: 4px;
+        height: 38px;
+    }
+    
+    .arrow-line-white:first-child {
+        transform: rotate(45deg) translateX(13px);
+    }
+    
+    .arrow-line-white:last-child {
+        transform: rotate(-45deg) translateX(-13px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+        letter-spacing: 0.12em;
+    }
+
+    .hero-subtitle {
+        font-size: 0.6875rem;
+        white-space: normal;
+    }
+    
+    .hero-label {
+        font-size: 0.6875rem;
+    }
+
+    .hero-logo-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-pattern-bg {
+        width: 240px;
+        height: 360px;
+    }
+    
+    .hero-content {
+        padding: 1.5rem 0.75rem;
+        width: 95%;
+        max-width: 95%;
+    }
+    
+    .hero-location {
+        font-size: 0.6875rem;
+    }
+
+    .btn-download {
+        padding: 1rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+
+    .materials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    /* Hide scroll arrows on very small screens */
+    .scroll-arrow-left,
+    .scroll-arrow-right {
+        display: none;
+    }
+    
+    /* Keep center white arrow but make it smaller */
+    .scroll-arrow-center-white {
+        width: 40px;
+        height: 60px;
+    }
+    
+    .arrow-line-white {
+        width: 3px;
+        height: 30px;
+    }
+    
+    .arrow-line-white:first-child {
+        transform: rotate(45deg) translateX(10px);
+    }
+    
+    .arrow-line-white:last-child {
+        transform: rotate(-45deg) translateX(-10px);
+    }
+    
+    /* Justification page */
+    .justification-page-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .criterion-box {
+        padding: 1.25rem 1rem;
+    }
+    
+    .criterion-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.125rem;
+    }
+    
+    /* Download section */
+    .download-box {
+        padding: 1.25rem;
+    }
+    
+    .download-file-info h3 {
+        font-size: 1.125rem;
+    }
+    
+    .file-description {
+        font-size: 0.875rem;
+        word-break: break-all;
+    }
+    
+    /* Maps categories */
+    .map-category-card {
+        padding: 1.25rem;
+    }
+    
+    .map-category-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    /* Contact info */
+    .contact-info {
+        padding: 1.25rem;
+    }
+}
+

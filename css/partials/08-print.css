@@ -1,0 +1,32 @@
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+    .site-header,
+    .site-footer,
+    .menu-overlay,
+    .burger-menu {
+        display: none;
+    }
+
+    .content-section {
+        page-break-inside: avoid;
+        padding: 2rem 0;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    .hero-section {
+        background: none;
+        color: #000;
+        padding: 2rem 0;
+    }
+}

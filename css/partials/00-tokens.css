@@ -1,0 +1,24 @@
+/* ========================================
+   USTYURT PLATEAU - UNESCO NOMINATION DOSSIER
+   Minimalist Institutional Design
+   ======================================== */
+
+/* ========================================
+   COLOR PALETTE (as specified)
+   ======================================== */
+:root {
+    --color-primary: #6d6f64;
+    --color-secondary: #968d66;
+    --color-tertiary: #6e7063;
+    --color-accent-warm: #986555;
+    --color-accent-cool: #79868f;
+    --color-neutral: #adaaa0;
+    --color-base: #6d6f64;
+    
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-text: #333333;
+    --color-text-light: #666666;
+}
+
+/* ========================================

@@ -1,0 +1,301 @@
+/* ========================================
+   HEADER COMPONENT
+   ======================================== */
+.site-header {
+    background-color: var(--color-primary);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-logo {
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    opacity: 0.95;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-left: 2rem;
+    flex: 1;
+}
+
+.nav-link {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-secondary);
+    opacity: 1;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Menu Wrapper */
+.menu-wrapper {
+    position: relative;
+    margin-left: auto;
+}
+
+/* Burger Menu Button */
+.burger-menu {
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1002;
+    margin-left: auto;
+}
+
+.burger-menu:hover {
+    transform: scale(1.05);
+}
+
+.burger-menu:hover .burger-line {
+    background-color: var(--color-secondary);
+}
+
+.burger-line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.burger-menu.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Dropdown Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-content {
+    position: absolute;
+    top: 77px;
+    right: 2rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-base) 100%);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 
+                0 5px 15px rgba(110, 112, 98, 0.4);
+    width: 450px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s ease;
+    border-top: 3px solid var(--color-tertiary);
+    z-index: 1000;
+}
+
+.menu-overlay.active .menu-content {
+    max-height: 650px;
+    overflow-y: auto;
+}
+
+/* Custom scrollbar for menu */
+.menu-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.menu-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 12px 0;
+}
+
+.menu-content::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+    border-radius: 4px;
+}
+
+.menu-content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-tertiary);
+}
+
+.close-menu {
+    display: none;
+}
+
+.menu-title {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+    margin: 0;
+    padding: 1.5rem 2rem 1rem;
+    text-align: left;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(197, 188, 160, 0.3);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.menu-title:first-of-type {
+    border-top: none;
+}
+
+.menu-title:not(:first-of-type) {
+    margin-top: 0.5rem;
+}
+
+.chapter-list {
+    list-style: none;
+    padding: 1rem 0 1.5rem;
+    margin: 0;
+}
+
+.chapter-list li {
+    border-bottom: 1px solid rgba(197, 188, 160, 0.15);
+}
+
+.chapter-list li:last-child {
+    border-bottom: none;
+}
+
+.chapter-link {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--color-white);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 3rem;
+    line-height: 1.4;
+}
+
+.chapter-link::before {
+    content: '\25B8';
+    position: absolute;
+    left: 1.5rem;
+    color: var(--color-secondary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.chapter-link:hover {
+    background-color: rgba(197, 188, 160, 0.2);
+    color: var(--color-secondary);
+    padding-left: 3.5rem;
+}
+
+.chapter-link:hover::before {
+    transform: translateX(5px);
+    color: var(--color-tertiary);
+    opacity: 1;
+}
+
+/* Main navigation links in burger menu */
+.nav-main-link {
+    font-weight: 500;
+    background-color: rgba(197, 188, 160, 0.1);
+}
+
+.nav-main-link::before {
+    content: '\2192';
+    color: var(--color-tertiary);
+    font-weight: bold;
+}
+
+.nav-main-link:hover {
+    background-color: rgba(197, 188, 160, 0.25);
+}
+
+/* Disabled chapter links */
+.chapter-link-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.chapter-link-disabled:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    padding-left: 3rem;
+}
+
+.chapter-link-disabled::before {
+    opacity: 0.3;
+}
+
+.chapter-link-disabled:hover::before {
+    transform: none;
+    color: var(--color-secondary);
+}
+
