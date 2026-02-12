@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (target) {
                 const headerHeight = document.querySelector('.site-header').offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 0;
                 
                 window.scrollTo({
                     top: targetPosition,
@@ -83,4 +83,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
 });
