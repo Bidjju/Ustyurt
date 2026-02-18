@@ -1,27 +1,53 @@
 
-/* Footer color fallback */
+/* Page color tokens: change colors here */
+:root {
+  --page-color-home: #6e7063;
+  --page-color-maps: #8b6556;
+  --page-color-identification: #968d66;
+  --page-color-justification: #7c858d;
+  --page-color-photo: #5a5e52;
+}
+
+/* Assign the active page color */
+body.home-page {
+  --page-color: var(--page-color-home);
+}
+
+body.maps-page {
+  --page-color: var(--page-color-maps);
+}
+
+body.identification-page {
+  --page-color: var(--page-color-identification);
+}
+
+body.justification-page {
+  --page-color: var(--page-color-justification);
+}
+
+body.photo-page {
+  --page-color: var(--page-color-photo);
+}
+
+/* Keep header/menu/footer synced with page color */
+body.home-page .site-header,
+body.maps-page .site-header,
+body.identification-page .site-header,
+body.justification-page .site-header,
+body.photo-page .site-header {
+  background-color: var(--page-color);
+}
+
+body.home-page .menu-content,
+body.maps-page .menu-content,
+body.identification-page .menu-content,
+body.justification-page .menu-content,
+body.photo-page .menu-content {
+  background: linear-gradient(135deg, var(--page-color) 0%, var(--page-color) 100%);
+}
+
 .site-footer svg path {
-  fill: #6e7063;
-}
-
-/* INDEX - brown */
-.home-page .site-footer svg path {
-  fill: #6e7063;
-}
-
-/* MAPS - red */
-.maps-page .site-footer svg path {
-  fill: #8b6556;
-}
-
-/* IDENTIFICATION - yellow */
-.identification-page .site-footer svg path {
-  fill: #968d66;
-}
-
-/* JUSTIFICATION - blue */
-.justification-page .site-footer svg path {
-  fill: #7c858d;
+  fill: var(--page-color, #6e7063);
 }
 
 /* Prevent extra gap before footer */
@@ -56,5 +82,6 @@ body.menu-open {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
 }
+
 
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maps - Ustyurt Plateau UNESCO World Heritage Nomination</title>
+    <title>Photo - Ustyurt Plateau UNESCO World Heritage Nomination</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/partials/00-tokens.css">
     <link rel="stylesheet" href="css/partials/01-base.css">
@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="css/partials/08-print.css">
     <link rel="stylesheet" href="css/partials/09-overrides.css">
 </head>
-<body class="maps-page">
-    <!-- HEADER COMPONENT -->
+<body class="photo-page">
     <header class="site-header">
         <div class="header-container">
             <div class="header-content">
@@ -35,7 +34,6 @@
                         <span class="burger-line"></span>
                         <span class="burger-line"></span>
                     </button>
-                    <!-- BURGER MENU DROPDOWN -->
                     <div class="menu-overlay" id="menuOverlay">
                         <div class="menu-content">
                             <nav class="dossier-chapters">
@@ -65,29 +63,47 @@
             </div>
         </div>
     </header>
-    <!-- MAPS PAGE CONTENT -->
-    <section class="maps-page-section">
+
+    <section class="photo-page-section">
         <div class="container">
             <div class="section-header">
-                <h1>Interactive Map</h1>
+                <h1>Photo Gallery</h1>
             </div>
             <div class="section-content">
-                <div class="single-map-block">
-                    <p>Explore the Ustyurt Plateau area on the interactive map below.</p>
-                    <div class="single-map-frame">
-                        <iframe
-                            title="Interactive map of Ustyurt Plateau"
-                            src="https://www.openstreetmap.org/export/embed.html?bbox=51.5%2C41.0%2C57.8%2C46.0&layer=mapnik&marker=43.5%2C54.7"
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                    <a class="btn-view-maps" href="https://www.openstreetmap.org/?mlat=43.5&mlon=54.7#map=7/43.5/54.7" target="_blank" rel="noopener noreferrer">Open Full Map</a>
+                <div class="photo-gallery-grid" id="photoGalleryGrid">
+                    <button type="button" class="photo-gallery-item" data-src="images/cave-hero.jpg" data-caption="Ustyurt cave landscape">
+                        <img src="images/cave-hero.jpg" alt="Ustyurt cave landscape">
+                    </button>
+                    <button type="button" class="photo-gallery-item" data-src="images/cover-page.png" data-caption="Nomination cover page visual">
+                        <img src="images/cover-page.png" alt="Nomination cover page visual">
+                    </button>
+                    <button type="button" class="photo-gallery-item" data-src="images/landscape-silhouette-new.png" data-caption="Ustyurt landscape silhouette">
+                        <img src="images/landscape-silhouette-new.png" alt="Ustyurt landscape silhouette">
+                    </button>
+                    <button type="button" class="photo-gallery-item" data-src="images/decoration-1.png" data-caption="Decorative visual detail 1">
+                        <img src="images/decoration-1.png" alt="Decorative visual detail 1">
+                    </button>
+                    <button type="button" class="photo-gallery-item" data-src="images/decoration-2.png" data-caption="Decorative visual detail 2">
+                        <img src="images/decoration-2.png" alt="Decorative visual detail 2">
+                    </button>
+                    <button type="button" class="photo-gallery-item" data-src="images/decoration-3.png" data-caption="Decorative visual detail 3">
+                        <img src="images/decoration-3.png" alt="Decorative visual detail 3">
+                    </button>
                 </div>
             </div>
         </div>
     </section>
-    <!-- FOOTER COMPONENT -->
+
+    <div class="photo-lightbox" id="photoLightbox" aria-hidden="true">
+        <button type="button" class="photo-lightbox-close" id="photoLightboxClose" aria-label="Close photo viewer">&times;</button>
+        <button type="button" class="photo-lightbox-nav prev" id="photoPrev" aria-label="Previous photo">&#10094;</button>
+        <figure class="photo-lightbox-content">
+            <img id="photoLightboxImage" src="" alt="">
+            <figcaption id="photoLightboxCaption"></figcaption>
+        </figure>
+        <button type="button" class="photo-lightbox-nav next" id="photoNext" aria-label="Next photo">&#10095;</button>
+    </div>
+
     <footer class="site-footer">
         <<?xml version="1.0" encoding="UTF-8"?>
 <svg id="svg2" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 1753.7 81.27">
@@ -99,8 +115,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/photo-gallery.js"></script>
 </body>
 </html>
-
-
 
