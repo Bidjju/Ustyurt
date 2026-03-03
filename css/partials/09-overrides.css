@@ -6,6 +6,7 @@
   --page-color-identification: #968d66;
   --page-color-justification: #7c858d;
   --page-color-photo: #5a5e52;
+  --page-color-chapter: #6f786d;
 }
 
 /* Assign the active page color */
@@ -29,12 +30,31 @@ body.photo-page {
   --page-color: var(--page-color-photo);
 }
 
+body.executive-summary-page,
+body.description-page,
+body.conservation-page,
+body.protection-management-page,
+body.monitoring-page,
+body.documentation-page,
+body.contact-authorities-page,
+body.signature-page {
+  --page-color: var(--page-color-chapter);
+}
+
 /* Keep header/menu/footer synced with page color */
 body.home-page .site-header,
 body.maps-page .site-header,
 body.identification-page .site-header,
 body.justification-page .site-header,
-body.photo-page .site-header {
+body.photo-page .site-header,
+body.executive-summary-page .site-header,
+body.description-page .site-header,
+body.conservation-page .site-header,
+body.protection-management-page .site-header,
+body.monitoring-page .site-header,
+body.documentation-page .site-header,
+body.contact-authorities-page .site-header,
+body.signature-page .site-header {
   background-color: var(--page-color);
 }
 
@@ -42,7 +62,15 @@ body.home-page .menu-content,
 body.maps-page .menu-content,
 body.identification-page .menu-content,
 body.justification-page .menu-content,
-body.photo-page .menu-content {
+body.photo-page .menu-content,
+body.executive-summary-page .menu-content,
+body.description-page .menu-content,
+body.conservation-page .menu-content,
+body.protection-management-page .menu-content,
+body.monitoring-page .menu-content,
+body.documentation-page .menu-content,
+body.contact-authorities-page .menu-content,
+body.signature-page .menu-content {
   background: linear-gradient(135deg, var(--page-color) 0%, var(--page-color) 100%);
 }
 
@@ -82,6 +110,5 @@ body.menu-open {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
 }
-
 
 

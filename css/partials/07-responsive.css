@@ -49,6 +49,11 @@
         max-width: 90%;
     }
 
+    .cover-panel,
+    .cover-content {
+        min-height: 460px;
+    }
+
     .hero-logo-container {
         width: 180px;
         height: 180px;
@@ -295,6 +300,11 @@
         padding: 1.5rem 0.75rem;
         width: 95%;
         max-width: 95%;
+    }
+
+    .cover-panel,
+    .cover-content {
+        min-height: 380px;
     }
     
     .hero-location {
