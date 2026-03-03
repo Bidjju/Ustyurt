@@ -1,8 +1,8 @@
-/* ========================================
+﻿/* ========================================
    HEADER COMPONENT
    ======================================== */
-.site-header {
-    background-color: var(--color-primary);
+.site-header {    background: var(--header-bg);
+    color: var(--header-fg);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -46,7 +46,7 @@
     font-family: 'Lora', serif;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-white);
+    color: var(--header-fg);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     transition: color 0.3s ease, opacity 0.3s ease;
@@ -107,7 +107,7 @@
 .burger-line {
     width: 30px;
     height: 3px;
-    background-color: var(--color-white);
+    background-color: var(--header-fg);
     border-radius: 2px;
     transition: all 0.3s ease;
     display: block;
@@ -230,7 +230,7 @@
 .chapter-link {
     display: block;
     padding: 1rem 2rem;
-    color: var(--color-white);
+    color: var(--header-fg);
     font-size: 0.9375rem;
     font-weight: 400;
     transition: all 0.3s ease;
@@ -286,7 +286,7 @@
 
 .chapter-link-disabled:hover {
     background-color: transparent;
-    color: var(--color-white);
+    color: var(--header-fg);
     padding-left: 3rem;
 }
 
@@ -298,4 +298,6 @@
     transform: none;
     color: var(--color-secondary);
 }
+
+
 

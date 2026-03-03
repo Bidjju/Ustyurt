@@ -1,4 +1,4 @@
-/* ========================================
+﻿/* ========================================
    USTYURT PLATEAU - UNESCO NOMINATION DOSSIER
    Minimalist Institutional Design
    ======================================== */
@@ -22,4 +22,38 @@
     --ornament-opacity: 0.12;
 }
 
-/* ========================================
+/* Per-page chapter theme palette */
+:root{
+  --c1:#8b6556;
+  --c2:#6e7063;
+  --c3:#7c858d;
+  --c4:#968d66;
+  --c5:#5f6b71;
+  --page-color: var(--c2);
+  --header-bg: var(--page-color);
+  --footer-bg: var(--page-color);
+  --header-fg:#ffffff;
+  --footer-fg:#ffffff;
+}
+body[data-theme="ch1"]{ --page-color: var(--c1); }
+body[data-theme="ch2"]{ --page-color: var(--c2); }
+body[data-theme="ch3"]{ --page-color: var(--c3); }
+body[data-theme="ch4"]{ --page-color: var(--c4); }
+body[data-theme="ch5"]{ --page-color: var(--c5); }
+body[data-theme="ch6"]{ --page-color: var(--c1); }
+body[data-theme="ch7"]{ --page-color: var(--c3); }
+
+/* Page-level assignments */
+body[data-theme="home"] { --page-color: var(--c2); }          /* Main remains the same */
+body[data-theme="maps"] { --page-color: var(--c3); }          /* #7c858d */
+body[data-theme="photo"] { --page-color: var(--c4); }
+body[data-theme="executive"] { --page-color: var(--c5); }
+body[data-theme="identification"] { --page-color: var(--c1); }
+body[data-theme="description"] { --page-color: var(--c2); }
+body[data-theme="justification"] { --page-color: var(--c3); }
+body[data-theme="conservation"] { --page-color: var(--c4); }
+body[data-theme="protection"] { --page-color: var(--c5); }
+body[data-theme="monitoring"] { --page-color: var(--c1); }
+body[data-theme="documentation"] { --page-color: var(--c3); }
+body[data-theme="contact"] { --page-color: var(--c4); }
+body[data-theme="signature"] { --page-color: var(--c5); }

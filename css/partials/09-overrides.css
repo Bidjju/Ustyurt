@@ -12,33 +12,46 @@
 /* Assign the active page color */
 body.home-page {
   --page-color: var(--page-color-home);
+  --header-bg: var(--page-color-home);
+  --footer-bg: var(--page-color-home);
 }
 
 body.maps-page {
   --page-color: var(--page-color-maps);
+  --header-bg: var(--page-color-maps);
+  --footer-bg: var(--page-color-maps);
 }
 
 body.identification-page {
   --page-color: var(--page-color-identification);
+  --header-bg: var(--page-color-identification);
+  --footer-bg: var(--page-color-identification);
 }
 
 body.justification-page {
   --page-color: var(--page-color-justification);
+  --header-bg: var(--page-color-justification);
+  --footer-bg: var(--page-color-justification);
 }
 
 body.photo-page {
   --page-color: var(--page-color-photo);
+  --header-bg: var(--page-color-photo);
+  --footer-bg: var(--page-color-photo);
 }
 
 body.executive-summary-page,
 body.description-page,
 body.conservation-page,
+body.protection-page,
 body.protection-management-page,
 body.monitoring-page,
 body.documentation-page,
 body.contact-authorities-page,
 body.signature-page {
   --page-color: var(--page-color-chapter);
+  --header-bg: var(--page-color-chapter);
+  --footer-bg: var(--page-color-chapter);
 }
 
 /* Keep header/menu/footer synced with page color */
@@ -50,6 +63,7 @@ body.photo-page .site-header,
 body.executive-summary-page .site-header,
 body.description-page .site-header,
 body.conservation-page .site-header,
+body.protection-page .site-header,
 body.protection-management-page .site-header,
 body.monitoring-page .site-header,
 body.documentation-page .site-header,
@@ -66,6 +80,7 @@ body.photo-page .menu-content,
 body.executive-summary-page .menu-content,
 body.description-page .menu-content,
 body.conservation-page .menu-content,
+body.protection-page .menu-content,
 body.protection-management-page .menu-content,
 body.monitoring-page .menu-content,
 body.documentation-page .menu-content,
@@ -76,6 +91,23 @@ body.signature-page .menu-content {
 
 .site-footer svg path {
   fill: var(--page-color, #6e7063);
+}
+
+/* Keep footer strictly identical to header color on all pages */
+.site-footer .footer-ornament .silhouette,
+.site-footer svg path,
+.site-footer svg polygon {
+  fill: var(--header-bg) !important;
+  opacity: 1;
+  fill-opacity: 1;
+}
+
+/* Match footer visual weight to header on all pages */
+.site-footer {
+  opacity: 1;
+  box-shadow: none;
+  background: transparent;
+  border: 0;
 }
 
 /* Prevent extra gap before footer */
